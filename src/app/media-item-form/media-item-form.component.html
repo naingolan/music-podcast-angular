@@ -15,6 +15,9 @@
         <li>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" formControlName="name">
+            <div *ngIf="form.get('name')?.hasError('pattern')" class="error">
+                Name has Invalid Characters
+            </div>
         </li>
         <li>
             <label for="category">Category</label>
@@ -30,7 +33,11 @@
         <li>
             <label for="year">Year</label>
             <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+            <div *ngIf="form.get('year')?.hasError('yearRange')&&form.get('year')?.touched" class="error">
+                Invalid Year has been Entered
+            </div>
+
         </li>
     </ul>
-    <button type="submit">Save</button>
+    <button [disabled]="!form.valid" type="submit">Save</button>
 </form>
