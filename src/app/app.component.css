@@ -1,0 +1,13 @@
+*,html,body{
+    background-color: hsl(210, 74%, 89%);
+    border:0;
+    height: 100%;
+    padding:0;
+    padding:0;
+    margin:0;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
