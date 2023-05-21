@@ -51,3 +51,10 @@ section>div{
     flex-direction: row;
     
 }
+
+.medium-movies{
+    color:yellow !important;
+}
+.media-series{
+    color:blue !important;
+}

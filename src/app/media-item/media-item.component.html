@@ -1,9 +1,7 @@
 <section>
 <img src="assets/avater.png" alt="transformer">
 <h1>{{mediaItem.name}}</h1>
-<div ngIf="mediaItem.watchedOn">
-<p>{{mediaItem.watchedOn}}</p>
-</div>div>
+ <p *ngIf="mediaItem.watchedOn">Watched on {{mediaItem.watchedOn |date: 'shortDate'}}</p>
 <div class="flexer">
 <p>{{mediaItem.category}}</p>
 <p>{{mediaItem.year}}</p>
